@@ -21,14 +21,14 @@ static void mostrar_menu(const Nave *nave)
     printf("  3) Inciso b: período orbital\n");
     printf("  4) Inciso c: aceleración centrípeta\n");
     printf("  5) Inciso d: pulso lateral del propulsor\n");
-    printf("  6) Resumen completo\n");
+    printf("  6) Inciso k: órbita geoestacionaria\n");
     printf("  7) Inciso e: energía cinética, potencial y mecánica\n");
     printf("  8) Inciso f: gravedad en órbita e ingravidez\n");
     printf("  9) Inciso g: recorrido y ángulo en un tiempo\n");
     printf(" 10) Inciso h: Kepler y velocidad de escape\n");
     printf(" 11) Inciso i: órbita resultante tras el pulso\n");
     printf(" 12) Inciso j: energía para cambiar de altitud\n");
-    printf(" 13) Inciso k: órbita geoestacionaria\n");
+    printf(" 13) Resumen completo\n");
     printf("  0) Salir\n");
     printf("------------------------------------------\n");
 }
@@ -97,7 +97,7 @@ int main(void)
         case 3: mostrar_inciso_b(&orion);        break;
         case 4: mostrar_inciso_c(&orion);        break;
         case 5: pulso_lateral(&orion);           break;
-        case 6:
+        case 13:
             mostrar_inciso_a(&orion);
             mostrar_inciso_b(&orion);
             mostrar_inciso_c(&orion);
@@ -109,7 +109,7 @@ int main(void)
         case 10: mostrar_inciso_h(&orion);       break;
         case 11: orbita_tras_pulso(&orion);      break;
         case 12: cambio_de_altitud(&orion);      break;
-        case 13: mostrar_inciso_k(&orion);       break;
+        case 6: mostrar_inciso_k(&orion);       break;
         case 0:
             printf("\nFin de la simulación. ¡Buen viaje, Orion!\n");
             break;
