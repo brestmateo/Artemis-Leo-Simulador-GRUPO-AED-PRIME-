@@ -37,8 +37,7 @@ double calcular_periodo_kepler(double semieje)
 /* Despejando r de T = 2*pi*sqrt(r^3/(G*M)) con T = día sidéreo. */
 double calcular_radio_geoestacionario(void)
 {
-    double t = T_SIDEREO;
-    return cbrt(G_GRAV * M_TIERRA * t * t / (4.0 * PI * PI));
+     return cbrt(G_GRAV * M_TIERRA * T_SIDEREO * T_SIDEREO / (4.0 * PI * PI));
 }
 
 double calcular_delta_energia(double masa, double r1, double r2)
