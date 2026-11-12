@@ -7,6 +7,8 @@
 #include "simulador.h"
 #include "validaciones.h"
 #include "analisis.h"
+#include "juego.h"
+
 
 static void mostrar_menu(const Nave *nave)
 {
@@ -29,6 +31,7 @@ static void mostrar_menu(const Nave *nave)
     printf(" 11) Inciso j: energía para cambiar de altitud\n");
     printf(" 12) Inciso k: órbita geoestacionaria\n");
     printf(" 13) Resumen completo\n");
+    printf(" 14) JUGAR: Misión de corrección orbital\n");
     printf("  0) Salir\n");
     printf("------------------------------------------\n");
 }
@@ -90,7 +93,7 @@ int main(void)
 
     do {
         mostrar_menu(&orion);
-        opcion = leer_entero("Elija una opción: ", 0, 13);
+        opcion = leer_entero("Elija una opción: ", 0, 14);
 
         switch (opcion) {
         case 1:  configurar_nave(&orion);          break;
@@ -111,6 +114,7 @@ int main(void)
             mostrar_inciso_c(&orion);
             mostrar_inciso_d(&orion, A_PULSO, DT_PULSO);
             break;
+        case 14: jugar_mision(&orion);             break;    
         case 0:
             printf("\nFin de la simulación. ¡Buen viaje, Orion!\n");
             break;
