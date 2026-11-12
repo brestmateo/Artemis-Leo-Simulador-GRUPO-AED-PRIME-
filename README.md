@@ -13,7 +13,7 @@ Comisión: k 1.4
 | Arianna Salomé Fernandez | arizzz777 (Salo) |
 | Brest Abib Mateo | brestmateo |
 | DAugero Valdez Edgar Nicolas | nicodaugero-ux |
-| [Nombre y apellido] | [usuario] |
+| Brogini Tiago | tiagobrogini9-tech |
 
 
 ## 2. Escenario asignado
