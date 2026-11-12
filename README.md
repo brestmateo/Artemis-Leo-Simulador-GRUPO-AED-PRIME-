@@ -11,8 +11,8 @@ Comisión: k 1.4
 
 | Integrante | Usuario de GitHub |
 | Arianna Salomé Fernandez | arizzz777 (Salo) |
-| [Nombre y apellido] | [usuario] |
-| [Nombre y apellido] | [usuario] |
+| Brest Abib Mateo | brestmateo |
+| DAugero Valdez Edgar Nicolas | nicodaugero-ux |
 | [Nombre y apellido] | [usuario] |
 
 
