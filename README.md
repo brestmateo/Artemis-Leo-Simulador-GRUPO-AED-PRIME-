@@ -65,5 +65,5 @@ Para borrar los archivos compilados: `make clean`
 | Claude | Esqueleto modular del programa (`main.c`, `simulador.c/.h`, `validaciones.c/.h`) | Se pidió un esqueleto modular que compile, con los cálculos de los incisos a a d y lectura segura de datos | Se compiló con `make`, se probó cada inciso a mano y se comprobaron los resultados con las fórmulas físicas |
 | Claude | Revisión de la integración de las ramas | Se pasaron los zips de las ramas y se pidió revisar que compile todo junto, que la física sea correcta y que se cumpla la consigna | Se contrastaron las observaciones con el enunciado, se aplicaron las que correspondían y se volvió a compilar y probar|
 | Claude | Ciclo de turnos del juego (opción 14, `juego.h` / `juego.c`)|e pidió armar un ciclo de turnos. El código fue generado por Claude| Se leyó y se comprendió el código, se jugó para detectar errores y el Pull Request fue revisado por los compañeros |
-| Claude | [tarea] | [consulta] | [validación] |
-| Claude | [tarea] | [consulta] | [validación] |
+| Claude | Reordenar el menú y el switch de main.c. | Pregunté cómo dejar “Resumen completo” al final del menú".| Cambié los números y los case yo mismo y verifiqué que coincidieran. |
+| Claude | Revisar main.c y ayudar a compilar. | Le pasé mi código para ver errores y cómo correrlo en VS Code. | Borré el código duplicado, instalé gcc y recompilé después de cada cambio |
