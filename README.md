@@ -31,7 +31,29 @@ el usuario:
 - Incisos adicionales: energías, gravedad e ingravidez, Kepler, velocidad de escape,
   cambio de altitud y órbita geoestacionaria.
 
-[Las reglas del juego cuando esté implementado.]
+Juego: "Misión de corrección orbital"
+
+Orion da vueltas a la Tierra en una órbita circular. En cada turno ocurre un evento aleatorio que lo empuja y deforma su órbita, y el jugador corrige con combustible limitado.
+
+Reglas
+
+La misión dura 5 turnos.
+Antes de empezar se elige la dificultad:
+Dificultad	| Combustible inicial  |	Fuerza de los golpes  |    	Ayuda
+1 - Fácil	  |     250 m/s          |    	10 a 35 m/s       | 	Pistas sobre qué acción conviene
+2 - Normal  |     150 m/s	         |     10 a 50 m/s	      |         -
+3 - Difícil	|      90 m/s	         |     10 a 70 m/s        |       	-
+
+El combustible se mide en m/s de cambio de velocidad disponibles.
+En cada turno ocurre un evento al azar entre 6 posibles: micrometeorito (empuja hacia la Tierra), ráfaga solar (empuja hacia el espacio), atmósfera tenue (frena), falla de propulsor (acelera), basura espacial (frena y empuja hacia abajo) o calma (no pasa nada).
+Después del evento el programa muestra cómo quedó la órbita: perigeo (punto más bajo), apogeo (punto más alto), excentricidad y el margen antes de la altura mínima segura.
+El jugador elige una acción (una por turno): A acelerar, F frenar, S subir (empujar hacia el espacio), B bajar (empujar hacia la Tierra) o N no hacer nada. Si corrige, indica cuánto cambio de velocidad usa (mínimo 1 m/s, hasta el combustible que le queda).
+Se pierde si el perigeo queda por debajo de 150 km de altura (la nave se quema en la atmósfera). Si la nave llegara a escapar de la Tierra, también falla la misión.
+Se gana si se sobreviven los 5 turnos.
+
+Puntaje (solo si se gana)
+
+puntos = 500 + 2 x (combustible que sobra) + (1 - excentricidad final) x 500
 
 ## 3. Funcionamiento
 
@@ -46,7 +68,18 @@ Estructura del proyecto:
 | `simulador.h / simulador.c` | Constantes, tipos (`Orbita`, `Nave`) y cálculos físicos |
 | `analisis.h / analisis.c` | Incisos adicionales (e a k) |
 | `validaciones.h / validaciones.c` | Lectura segura de enteros, reales y caracteres |
+| `juego.h / juego.c` |	Juego por turnos: tabla de eventos, estado de la partida, historial de turnos, puntaje y reporte final.
 | `Makefile` | Compilación |
+
+Requisitos técnicos y dónde se cumplen
+Estructuras condicionales y repetitivas	if/else, switch, do-while del menú, for: En los turnos.
+Modularización: Funciones de una sola responsabilidad separadas en módulos .c/.h.
+Arreglos y punteros: Tabla EVENTOS[] y arreglo historial[] de structs; funciones que reciben Nave *, Partida * o devuelven resultados por puntero.
+Validaciones exhaustivas: Módulo validaciones: ver 3.3.
+Manejo de errores e interfaz limpia: Mensajes [ERROR] y [AVISO] uniformes; el programa nunca se cierra por una entrada inválida.
+Control de versiones
+
+El trabajo se desarrolló en un repositorio de GitHub con ramas por componente (feature/...) integradas a main mediante Pull Requests. El historial de commits muestra el desarrollo gradual y la participación de todos los integrantes.
 
 ## 4. Compilación y ejecución
 
