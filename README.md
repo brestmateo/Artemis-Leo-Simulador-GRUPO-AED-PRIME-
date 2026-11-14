@@ -61,5 +61,9 @@ Para borrar los archivos compilados: `make clean`
 
 | Herramienta | Tarea | Consulta realizada | Cómo se validó / adaptó |
 |---|---|---|---|
-| Claude | Revision del código | | Se aplicaron solo las sugerencias que correspondían y se volvió a compilar y probar |
-| [otra herramienta] | [tarea] | [consulta] | [validación] |
+| Claude | Revisión del código | Se consultó cómo optimizar el código | Se aplicaron solo las sugerencias que correspondían en base a los incisos agregados y se volvió a compilar y probar |
+| Claude | Esqueleto modular del programa (`main.c`, `simulador.c/.h`, `validaciones.c/.h`) | Se pidió un esqueleto modular que compile, con los cálculos de los incisos a a d y lectura segura de datos | Se compiló con `make`, se probó cada inciso a mano y se comprobaron los resultados con las fórmulas físicas |
+| Claude | Revisión de la integración de las ramas | Se pasaron los zips de las ramas y se pidió revisar que compile todo junto, que la física sea correcta y que se cumpla la consigna | Se contrastaron las observaciones con el enunciado, se aplicaron las que correspondían y se volvió a compilar y probar|
+| Claude | Ciclo de turnos del juego (opción 14, `juego.h` / `juego.c`)|e pidió armar un ciclo de turnos. El código fue generado por Claude| Se leyó y se comprendió el código, se jugó para detectar errores y el Pull Request fue revisado por los compañeros |
+| Claude | [tarea] | [consulta] | [validación] |
+| Claude | [tarea] | [consulta] | [validación] |
