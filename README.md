@@ -61,5 +61,5 @@ Para borrar los archivos compilados: `make clean`
 
 | Herramienta | Tarea | Consulta realizada | Cómo se validó / adaptó |
 |---|---|---|---|
-| Claude | [ej: revisar el código contra la consigna] | [qué se le pidió] | [ej: se compiló y se probó a mano] |
+| Claude | Revision del código | | Se aplicaron solo las sugerencias que correspondían y se volvió a compilar y probar |
 | [otra herramienta] | [tarea] | [consulta] | [validación] |
